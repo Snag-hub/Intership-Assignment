@@ -6,10 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script defer src="script.js"></script>
   <title>Json Data Fetch</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    table{
+      width: 100%;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <table>
-    <tr>
+    <tr >
       <th rowspan="2">
         Machine Name
       </th>
@@ -58,8 +68,7 @@
         YTD
       </td>
     </tr>
-    <tbody id="table_body">
-    </tbody>
+    <tbody id="table_body"></tbody>
   </table>
 </body>
 </html>
