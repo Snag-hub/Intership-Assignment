@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+
+:root {
+  --inputColor: #e1e1e1;
+}
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background-color: white;
+}
+form{
+  border: 1px solid black;
+  width: 80%;
+  margin: 0 auto;
+}
+form>h1{
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: 500;
+}
+.form-control{
+  display: flex;
+  padding: 10px;
+}
+.form-control>label{
+  width: 50%;
+  height: 40px;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+}
+.form-control>input[type="text"],input[type="password"],input[type="file"],select{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  height: 40px;
+  padding: 5px 10px;
+  border: none;
+  background-color: var(--inputColor);
+  border-radius: 5px;
+  outline: none;
+  margin-left: 10px;
+}
+
+.btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btns>input{
+  width: 100px;
+  height: 40px;
+  border: none;
+  background-color: #55d7fe;
+  border-radius: 5px;
+  outline: none;
+  margin: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btns>input[type="reset"]{
+  width: 10em;
+}
+.form-control input:focus{
+  outline: 0;
+}
+.form-control.success input{
+  border: 2px solid green;
+}
+.form-control.error input{
+  border: 2px solid red;
+}
+.form-control .error{
+  color: red;
+  font-size: 9px;
+  height: 13px;
+}
+ 
