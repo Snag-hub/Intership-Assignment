@@ -13,6 +13,17 @@ myForm.addEventListener('submit', e=>{
   validateInput();
 });
 
+
+const preventSpecialCharacters = ( element, indexOf) => {
+  const specialCharacters = ['_', '+', '-'];
+  const inputValue = element.value.trim();
+  const firstCharacter = inputValue.charAt(indexOf);
+  const isSpecialCharacter = specialCharacters.includes(firstCharacter);
+  return isSpecialCharacter;
+};
+
+
+
 const setError = (element, message) =>{
   const inputControl = element.parentElement;
   const errorDisplay = inputControl.querySelector('.error');
@@ -52,6 +63,8 @@ const validateInput = () => {
 
   if(piplelineValue === ''){
     setError(pipelineName, 'Pipeline Name cannot be blank');
+  }else if(preventSpecialCharacters(pipelineName, 0)){
+    setError(pipelineName, 'Pipeline Name cannot start with special characters');
   }else if(piplelineValue.length < 5){
     setError(pipelineName, 'Pipeline Name must be at least 5 characters');
   }else {
@@ -60,6 +73,8 @@ const validateInput = () => {
 
   if(productValue === ''){
     setError(productName, 'Product Name cannot be blank');
+  }else if(preventSpecialCharacters(productName, 0)){
+    setError(productName, 'Product Name cannot start with special characters');
   }else if(productValue.length < 5){
     setError(productName, 'Product Name must be at least 5 characters');
   }else{
@@ -68,6 +83,8 @@ const validateInput = () => {
 
   if(bucketValue === ''){
     setError(BucketName, 'Bucket Name cannot be blank');
+  }else if(preventSpecialCharacters(BucketName, 0)){
+    setError(BucketName, 'Bucket Name cannot start with special characters');
   }else if(bucketValue.length < 5){
     setError(BucketName, 'Bucket Name must be at least 5 characters');
   }else{
@@ -82,6 +99,8 @@ const validateInput = () => {
 
   if(credentailsValue === ''){
     setError(credentails, 'Credentails cannot be blank');
+  }else if(preventSpecialCharacters(credentails, 0)){
+    setError(credentails, 'Credentails cannot start with special characters');
   }else if(credentailsValue.length < 5){
     setError(credentails, 'Credentails must be at least 5 characters');
   }else{

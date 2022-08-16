@@ -17,6 +17,7 @@ form{
   border: 1px solid black;
   width: 80%;
   margin: 0 auto;
+  margin-top: 5em;
 }
 form>h1{
   text-align: center;
@@ -28,6 +29,7 @@ form>h1{
   display: flex;
   padding: 10px;
 }
+
 .form-control>label{
   width: 50%;
   height: 40px;
@@ -81,7 +83,8 @@ form>h1{
 }
 .form-control .error{
   color: red;
-  font-size: 9px;
+  font-size: 12px;
   height: 13px;
+  padding: 5px 10px;
 }
  
